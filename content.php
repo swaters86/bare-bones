@@ -1,15 +1,37 @@
-<strong>Post Title:</strong> <?php the_title(); ?> <br>
-<strong>Post Link:</strong> <?php the_permalink() ?> <br>
-<strong>Post Time:</strong> <?php the_time( 'F jS, Y' ) ?> by <?php the_author_posts_link() ?> <br>
-<strong>Post Categories:</strong> <?php the_category( ',' ); ?> <br>
-<strong>Post Tags:</strong> <?php the_tags(); ?> <br>
+<article  <?php post_class(); ?> >
 
-<?php if ( is_front_page() ) { ?>
-<strong>Post Excerpt:</strong> <?php the_excerpt(); ?> 
-<?php }?>
+	<?php if ( has_post_thumbnail() ) { ?>
+		the_post_thumbnail();
+	<?php }?> 
 
-<?php if ( is_single() ) { ?>
-<strong>Post Content:</strong> <?php the_content(); ?>  
-<?php }?>
+	<a class="title" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+		<h2>
+			<?php the_title(); ?>
+		</h2>
+	</a> <!-- .title --> 
 
+	<?php if ( is_front_page() ) { ?>
+		<?php the_excerpt(); ?> 
+	<?php }?>
 
+	<?php if ( is_single() ) { ?>
+		<ul class="meta">
+			<li>
+				<label><i class="fa fa-calendar fa-1"></i>Posted On:</label>
+				<span><?php the_time( 'F jS, Y' ) ?></span>
+			</li>
+			<li>
+				<label><label><i class="fa fa-pencil fa-1"></i>Author:</label>
+				<span><?php the_author_posts_link() ?></span>
+			<li>
+				<label><i class="fa fa-folder-open fa-1"></i>Categories:</label>
+				<span>Software</span>
+			</li>
+			<li> 
+				<label><i class="fa fa-tags fa-1"></i>Tags:</label>
+				<span><?php the_tags(''); ?></span>
+			</li>
+		</ul> <!-- .meta --> 
+	<?php }?>
+	
+</article> <!-- .post-<?php the_id(); ?> -->

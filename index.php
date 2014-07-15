@@ -2,33 +2,39 @@
 get_header(); 
 ?>
 
-<h2>index.php</h2>
+	<div class="primary-content">
 
-<hr>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'content' ); ?>
+		<?php endwhile; else: ?>
+			<?php get_template_part( 'content', 'none' ); ?>
+		<?php endif; ?> 
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<?php get_template_part( 'content' ); ?>
-<?php endwhile; else: ?>
-	<?php get_template_part( 'content', 'none' ); ?>
-<?php endif; ?>
+	</div> <!-- .primary-content -->
 
-<hr>
+	<div class="secondary-content">
 
-<h3>Search Form</h3>
-<?php get_search_form(); ?>
+		<h2>Search</h2>
+		<?php get_search_form(); ?>
 
-<hr>
+		<h2>Archives</h2>
 
-<h2>Archives<h2>
+		<h3>Yearly</h3>
+		<ul>
+			<?php wp_get_archives( 'type=yearly' ); ?>
+		</ul>
 
-<h3>Yearly</h3>
-<?php wp_get_archives( 'type=yearly' ); ?>
+		<h3>Monthly</h3>
+		<ul>
+			<?php wp_get_archives( 'type=monthly' ); ?>
+		</ul>
 
-<h3>Montly</h3>
-<?php wp_get_archives( 'type=monthly' ); ?> 
+		<h3>Categories</h3>
+		<ul>
+			<?php wp_list_categories(); ?>
+		</ul>
 
-<h3>Categories</h3>
-<?php wp_list_categories(); ?>
+	</div> <!-- .secondary-content -->
 
 <?php 
 get_footer(); 

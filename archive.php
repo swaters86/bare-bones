@@ -1,7 +1,7 @@
 <?php 
 get_header(); 
 ?>
-
+<main>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php
 	if ( is_day() ) :
@@ -14,12 +14,11 @@ get_header();
 		_e( '<strong>Archives</strong>', '' );
 	endif;
 ?> 
-<br><br>
 <?php get_template_part( 'content' ); ?>
 <?php endwhile; else: ?>
 	<?php get_template_part( 'content', 'none' ); ?>
 <?php endif; ?>
-
+</main>
 <?php 
 get_footer(); 
 ?>

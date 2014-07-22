@@ -19,13 +19,11 @@
 	</ul>
 
 	<h3>Categories</h3>
-	
+
 	<ul>
 		<?php wp_list_categories(); ?>
 	</ul>
 
-
     <?php dynamic_sidebar( 'custom-content' ); ?>
-
 
 </div> <!-- .secondary-content -->

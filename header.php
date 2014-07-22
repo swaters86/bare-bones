@@ -24,18 +24,23 @@
 <![endif]-->
 </head>
 <body>
+	
 	<div class="page">
+
 		<header class="site-header">
 
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+
 				<h1>
 					<?php bloginfo( 'name' ); ?> 
 				</h1>
+
 			</a>
+
 			<p>
 				<?php bloginfo( 'description' ); ?> 
 			</p>
 
 			<?php wp_nav_menu(); ?>
-			
+
 		</header> <!-- .site-header -->

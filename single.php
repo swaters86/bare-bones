@@ -8,6 +8,13 @@ get_header();
 
 			<?php get_template_part( 'content' ); ?>
 
+			<?php
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				}
+			?>
+
 		<?php endwhile; else: ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
@@ -16,7 +23,7 @@ get_header();
 
 	</div> <!-- .primary -->
 
-<?php 
+<?php
 get_sidebar();
 get_footer(); 
 ?>

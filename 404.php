@@ -2,17 +2,15 @@
 get_header(); 
 ?>
 
-	<div class="primary-content">
+	<div class="primary">
+
 		<h2>
 			Yes, something went wrong :(
 		</h2>
-	</div> <!-- .primary-content -->
-	
-	<div class="secondary-content">
 
-	
-	</div> <!--.secondary-content -->
+	</div> <!-- .primary -->
 
-<?php 
+<?php
+get_sidebar();
 get_footer(); 
 ?>

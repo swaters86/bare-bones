@@ -1,6 +1,8 @@
 <?php 
 get_header(); 
 ?>
+	<!-- start archive.php --> 
+
 	<div class="primary">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -39,7 +41,9 @@ get_header();
 	<?php endif; ?>
 
 	</div> <!-- .primary -->
-	
+
+	<!-- end archive.php -->
+
 <?php
 get_sidebar();
 get_footer(); 

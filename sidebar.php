@@ -1,3 +1,5 @@
+<!-- start sidebar.php -->
+
 <div class="sidebar">
 
 	<h2>Search</h2>
@@ -26,4 +28,6 @@
 
     <?php dynamic_sidebar( 'custom-content' ); ?>
 
-</div> <!-- .secondary-content -->
+</div> <!-- .sidebar -->
+
+<!-- end sidebar.php -->

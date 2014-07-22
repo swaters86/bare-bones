@@ -1,3 +1,5 @@
+<!-- start footer.php --> 
+
 		<footer class="site-footer">
 
 			<p>
@@ -10,6 +12,8 @@
 		</footer> <!-- .site-footer -->
 
 	</div> <!-- .page --> 
-	
+
 </body>
 </html>	
+
+<!-- end footer.php -->

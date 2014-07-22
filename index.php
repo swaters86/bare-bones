@@ -1,6 +1,7 @@
 <?php 
 get_header(); 
 ?>
+    <!-- start index.php -->
 
 	<div class="primary">
 
@@ -15,7 +16,8 @@ get_header();
 		<?php endif; ?> 
 
 	</div> <!-- .primary -->
-
+	
+	<!-- end index.php -->
 <?php 
 get_sidebar();
 get_footer(); 

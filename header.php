@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- start header.php -->
 <html lang="en">
 <head>
 <title>
@@ -24,7 +25,7 @@
 <![endif]-->
 </head>
 <body>
-	
+
 	<div class="page">
 
 		<header class="site-header">
@@ -44,3 +45,5 @@
 			<?php wp_nav_menu(); ?>
 
 		</header> <!-- .site-header -->
+
+<!-- end header.php -->

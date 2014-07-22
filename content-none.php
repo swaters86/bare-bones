@@ -1,3 +1,5 @@
+<!-- start content-none.php --> 
+
 <h2>
 	<?php _e( 'Nothing Found', 'bare-bones' ); ?>
 </h2>
@@ -21,4 +23,6 @@
 </p>
 
 <?php endif; ?>
+
+<!-- end content-none.php -->
 

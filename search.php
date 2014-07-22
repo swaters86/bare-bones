@@ -2,6 +2,8 @@
 get_header(); 
 ?>
 
+	<!-- start search.php --> 
+
 	<div class="primary">
 
 	<h2>
@@ -21,6 +23,8 @@ get_header();
 	<?php endif; ?>
 
 	</div> <!-- .primary -->
+
+	<!-- end search.php -->
 
 <?php
 get_sidebar();

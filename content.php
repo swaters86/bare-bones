@@ -1,3 +1,5 @@
+<!-- start content.php --> 
+
 <article  <?php post_class(); ?> >
 
 	<?php if ( is_single() ) { ?>
@@ -61,5 +63,7 @@
 		<?php the_content(); ?>
 
 	<?php }?>
+
+<!-- end content.php -->
 	
 </article> <!-- .post-<?php the_id(); ?> -->

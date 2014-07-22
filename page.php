@@ -1,6 +1,8 @@
 <?php 
 get_header(); 
 ?>
+	<!-- start page.php --> 
+
 	<div class="primary">
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -14,6 +16,8 @@ get_header();
 		<?php endif; ?> 
 		
 	</div> <!-- .primary -->
+
+	<!-- end page.php -->
 	
 <?php
 get_sidebar();
